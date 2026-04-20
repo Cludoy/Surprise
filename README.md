@@ -1,6 +1,6 @@
-# 🌹 Surprise — A JoJo's Bizarre Birthday Adventure
+# 🌹 Surprise A JoJo's Bizarre Birthday Adventure
 
-A spectacular, interactive **Happy Birthday** website themed around **JoJo's Bizarre Adventure**, built as a surprise gift for a student. Hosted on GitHub Pages.
+A spectacular, interactive **Happy Birthday** website themed around **JoJo's Bizarre Adventure**, built as a surprise gift for a Gil. Hosted on GitHub Pages.
 
 ## ✨ Features
 
