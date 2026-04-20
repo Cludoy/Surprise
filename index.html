@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAPPY BIRTHDAY! — A JoJo's Bizarre Birthday Adventure</title>
+  <meta name="description" content="A spectacular JoJo's Bizarre Adventure themed Happy Birthday surprise! ZA WARUDO — time has stopped for your special day!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLES CANVAS ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== STAND CRY OVERLAY ===== -->
+  <div id="stand-cry-overlay" class="hidden">
+    <div class="cry-text" id="cry-text">ORA ORA ORA!</div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="manga-dots"></div>
+    <div class="speed-lines" id="speed-lines"></div>
+
+    <div class="hero-content">
+      <div class="tag-line">〜 A JoJo's Bizarre Birthday Adventure 〜</div>
+      <h1 class="hero-title">
+        <span class="title-happy">HAPPY</span>
+        <span class="title-birthday">BIRTHDAY!</span>
+      </h1>
+      <div class="za-warudo-badge" id="za-warudo-btn">
+        <span>ZA WARUDO!</span>
+        <span class="badge-sub">Click to Stop Time</span>
+      </div>
+      <p class="hero-sub">Your Stand has guided you here on this most <em>bizarre</em> and wonderful day.</p>
+      <div class="scroll-hint">
+        <span>↓ SCROLL TO DISCOVER YOUR DESTINY ↓</span>
+      </div>
+    </div>
+
+    <!-- floating roses -->
+    <div class="floating-roses" id="floating-roses"></div>
+  </section>
+
+  <!-- ===== ZA WARUDO FREEZE ===== -->
+  <div id="time-stop-screen" class="time-stop-screen hidden">
+    <div class="time-stop-inner">
+      <div class="ts-title">ZA WARUDO!</div>
+      <div class="ts-sub">TIME HAS STOPPED</div>
+      <div class="ts-message">Even time itself bows to celebrate your birthday.</div>
+      <div class="ts-clock" id="ts-clock">00:00:00</div>
+      <button class="ts-resume" id="ts-resume">TOKI WO UGOKIDASU! ▶</button>
+    </div>
+    <div class="ts-particles" id="ts-particles"></div>
+  </div>
+
+  <!-- ===== STANDS SECTION ===== -->
+  <section class="stands-section" id="stands">
+    <div class="section-header">
+      <div class="section-tag">PART II</div>
+      <h2 class="section-title">YOUR BIRTHDAY STANDS</h2>
+      <p class="section-desc">Every Stand reflects the soul of its user. These are yours today.</p>
+    </div>
+
+    <div class="stands-grid">
+      <div class="stand-card" data-cry="ORA ORA ORA!" data-color="#f59e0b">
+        <div class="stand-card-glow"></div>
+        <div class="stand-icon">👊</div>
+        <div class="stand-name">STAR PLATINUM</div>
+        <div class="stand-stat-bar"><span style="--w:98%"></span><label>POWER: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:92%"></span><label>SPEED: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:76%"></span><label>RANGE: C</label></div>
+        <p class="stand-desc">A birthday as powerful and precise as Star Platinum's fists. ORA ORA ORA!</p>
+        <button class="stand-btn" data-cry="ORA ORA ORA ORA ORA!">Cry Out!</button>
+      </div>
+
+      <div class="stand-card featured" data-cry="MUDA MUDA MUDA!" data-color="#7c3aed">
+        <div class="stand-card-glow"></div>
+        <div class="crown-badge">👑 BIRTHDAY STAND</div>
+        <div class="stand-icon">🌹</div>
+        <div class="stand-name">THE WORLD</div>
+        <div class="stand-stat-bar"><span style="--w:100%"></span><label>POWER: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:100%"></span><label>SPEED: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:80%"></span><label>RANGE: B</label></div>
+        <p class="stand-desc">ZA WARUDO! Time stops — because YOUR birthday is the most powerful moment in history.</p>
+        <button class="stand-btn featured-btn" data-cry="MUDA MUDA MUDA MUDA!">Cry Out!</button>
+      </div>
+
+      <div class="stand-card" data-cry="CRAZY DIAMOND!" data-color="#10b981">
+        <div class="stand-card-glow"></div>
+        <div class="stand-icon">💎</div>
+        <div class="stand-name">CRAZY DIAMOND</div>
+        <div class="stand-stat-bar"><span style="--w:95%"></span><label>POWER: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:90%"></span><label>SPEED: A</label></div>
+        <div class="stand-stat-bar"><span style="--w:82%"></span><label>HEALING: A</label></div>
+        <p class="stand-desc">This birthday restores everything wonderful in your life. Dora Dora Dora!</p>
+        <button class="stand-btn" data-cry="DORA DORA DORA!">Cry Out!</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIRTHDAY MESSAGE ===== -->
+  <section class="message-section" id="message">
+    <div class="message-bg-text">HAPPY BIRTHDAY</div>
+    <div class="message-container">
+      <div class="message-left">
+        <div class="jojo-pose-container">
+          <div class="pose-figure">✦</div>
+          <div class="pose-text">JOJO POSE</div>
+          <div class="pose-sparkles">
+            <span>★</span><span>◆</span><span>★</span><span>◆</span><span>★</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-right">
+        <div class="message-label">A MESSAGE FROM YOUR SENSEI</div>
+        <blockquote class="birthday-quote">
+          "There is one thing I've learned from JoJo — the most bizarre adventures lead to the greatest growth. 
+          Today, another chapter of <em>your</em> story begins."
+        </blockquote>
+        <p class="message-body">
+          Wishing you a birthday full of golden wind, unbreakable determination, and stands you never knew you had.
+          May your next year be as legendary as Part 5, as epic as Part 3, and as surprising as every JoJo twist.
+        </p>
+        <div class="message-signature">
+          <span class="sig-text">— Your Sensei 🌟</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY / PART TIMELINE ===== -->
+  <section class="timeline-section" id="timeline">
+    <div class="section-header">
+      <div class="section-tag">THE MANGA</div>
+      <h2 class="section-title">JOJO BIRTHDAY PARTS</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-content">
+          <div class="tl-part">PART 1</div>
+          <div class="tl-title">Phantom Birthday</div>
+          <p>The origin story. The day you were born — the beginning of something extraordinary. Even Dio couldn't stop this moment.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-dot">2</div>
+        <div class="timeline-content">
+          <div class="tl-part">PART 2</div>
+          <div class="tl-title">The Age of Celebration</div>
+          <p>Like the Pillar Men awakening, today you rise with style, power, and perfect hair. ACDC approves.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">3</div>
+        <div class="timeline-content">
+          <div class="tl-part">PART 3</div>
+          <div class="tl-title">Stardust Birthday Crusaders</div>
+          <p>Your Stand awakens. A group of friends (us!) crossed the world to reach you on this special day. ORA!</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-dot">4</div>
+        <div class="timeline-content">
+          <div class="tl-part">PART 4</div>
+          <div class="tl-title">Diamond is Unbreakable Birthday</div>
+          <p>Your birthday is unbreakable. Nothing — not serial killers, not Yoshikage Kira — can ruin this day.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">5</div>
+        <div class="timeline-content">
+          <div class="tl-part">PART 5</div>
+          <div class="tl-title">Golden Birthday Wind</div>
+          <p>This is... Requiem. Giorno's golden experience transforms this birthday into something beyond imagination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONFETTI BURST CTA ===== -->
+  <section class="cta-section" id="finale">
+    <div class="cta-inner">
+      <div class="cta-pretitle">YOUR DESTINY AWAITS</div>
+      <h2 class="cta-title">HAPPY BIRTHDAY, JOJO!</h2>
+      <p class="cta-sub">This is not the end of your story. It's just the next <strong>BIZARRE ADVENTURE</strong>. 🌟</p>
+      <button class="cta-btn" id="confetti-btn">🎉 TRIGGER STAND RUSH! 🎉</button>
+      <div class="muda-muda" id="muda-display"></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">★ JOJO BIRTHDAY ★</div>
+      <p class="footer-text">Made with 「GOLDEN WIND」 and a whole lot of MUDA.<br />
+        <em>JoJo's Bizarre Adventure is © Hirohiko Araki / Shueisha.</em>
+      </p>
+      <div class="footer-roses">🌹 🌹 🌹</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
